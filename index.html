@@ -5,6 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ritik Gupta | Portfolio</title>
   <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .main-wide {
+      padding: 2rem;
+      max-width: 1400px;
+      margin: auto;
+    }
+    .section-wrapper {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .experience, .project {
+      flex: 1;
+    }
+    .divider {
+      width: 2px;
+      background: repeating-linear-gradient(
+        to bottom,
+        #3EF3D9,
+        #3EF3D9 6px,
+        transparent 6px,
+        transparent 16px
+      );
+    }
+    .tile {
+      background-color: #2e2e2e;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .tile:hover {
+      transform: scale(1.02);
+    }
+    .tile img {
+      max-width: 100%;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+    .tile-title {
+      color: cyan;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+      text-decoration: none;
+    }
+    .tile-title:hover {
+      color: #00ffff;
+      text-decoration: underline;
+    }
+    .tile-desc {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -21,16 +77,28 @@
     <div class="section-wrapper">
       <div class="experience">
         <h2>Experience</h2>
-        <a class="clickable" href="tsalla.html">TSALLA AEROSPACE – CFD and Design Engineer</a>
-        <!-- Add more experiences linking to pages -->
+        <a href="tsalla.html">
+          <div class="tile">
+            <img src="assets/images/fixedwing.jpg" alt="Fixed-wing UAV" />
+            <div class="tile-title">TSALLA AEROSPACE – CFD and Design Engineer</div>
+            <div class="tile-desc">Worked on CFD, CAD, and wind tunnel testing of UAVs at a defense startup incubated at IISc.</div>
+          </div>
+        </a>
+        <!-- Add more experience tiles similarly -->
       </div>
 
       <div class="divider"></div>
 
       <div class="project">
         <h2>Projects</h2>
-        <a class="clickable" href="fsae.html">Formula SAE – Team Captain & Suspension Lead</a>
-        <!-- Add more projects linking to pages -->
+        <a href="fsae.html">
+          <div class="tile">
+            <img src="assets/images/formulacar.jpg" alt="Formula Student Car" />
+            <div class="tile-title">Formula SAE – Team Captain & Suspension Lead</div>
+            <div class="tile-desc">Led suspension design and vehicle dynamics modeling for Formula Student team.</div>
+          </div>
+        </a>
+        <!-- Add more project tiles similarly -->
       </div>
     </div>
   </main>
