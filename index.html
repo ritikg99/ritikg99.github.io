@@ -1,40 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ritik Gupta | Portfolio</title>
-  <link rel="stylesheet" href="assets/style.css">
-  <style>
-    body { text-align: justify; }
-    .section-wrapper { display: flex; gap: 2rem; margin-top: 2rem; }
-    .experience, .project { flex: 1; }
-    .divider {
-      width: 2px;
-      background: repeating-linear-gradient(
-        to bottom,
-        #3EF3D9,
-        #3EF3D9 4px,
-        transparent 4px,
-        transparent 8px
-      );
-    }
-    .toggle-content { display: none; margin-top: 0.5rem; }
-    .clickable {
-      color: cyan;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .clickable:hover { color: #00ffff; text-decoration: underline; }
-    img.project-img { width: 100%; max-width: 250px; margin-top: 0.5rem; }
-  </style>
-  <script>
-    function toggle(id) {
-      const content = document.getElementById(id);
-      content.style.display = content.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
   <nav>
@@ -47,53 +17,20 @@
     </ul>
   </nav>
 
-  <main>
-    <h1>Welcome to Ritik Gupta's Portfolio</h1>
-    <p>A methodical and organized Mechanical Engineer with two years of experience as a Design and CFD Engineer at a defense aerospace startup. This, along with multiple projects/internships like Formula SAE in Mechanical Design, 3D CAD and CAE, have refined my problem-solving skills, design engineering, and analysis capabilities.</p>
-
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>CFD, CAD, 3D Modelling, Mechanical Design, Fluid Mechanics, Heat Transfer, Parallel Computing, HPC</strong></li>
-      <li><strong>Programming:</strong> Python, C++, MATLAB</li>
-      <li><strong>OS/Software:</strong> Linux, Microsoft Office, PowerPoint, Word</li>
-    </ul>
-
+  <main class="main-wide">
     <div class="section-wrapper">
       <div class="experience">
         <h2>Experience</h2>
-        <a class="clickable" onclick="toggle('exp-tsalla-full')">TSALLA AEROSPACE – CFD and Design Engineer (Oct 2022 – Jul 2024)</a>
-        <div id="exp-tsalla-full" class="toggle-content">
-          <p>Development and improvement of design and aerodynamics of a fixed-wing VTOL and a quadcopter UAV at a defense startup. (Skills/Tools: Ansys Fluent, Structural, Catia V5, Solidworks, MATLAB, surfacing, part design)</p>
-          <ul>
-            <li>Reduced set-up times for simulations by 15-20% through cell sizing methodologies...</li>
-            <li>Involved in complete design of quad-copter UAV...</li>
-            <li>Designed the fuselage of a VTOL UAV...</li>
-            <li>Spearheaded wind tunnel testing...</li>
-            <li>Performed mesh and grid independence studies...</li>
-            <li>Developed a 6DoF aircraft MATLAB code...</li>
-          </ul>
-          <img class="project-img" src="assets/images/tsalla1.jpg" alt="Tsalla Image 1">
-          <img class="project-img" src="assets/images/tsalla2.jpg" alt="Tsalla Image 2">
-        </div>
-        <!-- More experiences can follow this structure -->
+        <a class="clickable" href="tsalla.html">TSALLA AEROSPACE – CFD and Design Engineer</a>
+        <!-- Add more experiences linking to pages -->
       </div>
 
       <div class="divider"></div>
 
       <div class="project">
         <h2>Projects</h2>
-        <a class="clickable" onclick="toggle('proj-fsae')">Formula SAE – Team Captain & Suspension Lead</a>
-        <div id="proj-fsae" class="toggle-content">
-          <p>Dec. 2018-Feb. 2022</p>
-          <ul>
-            <li>Developed a MATLAB code to calculate the load transfer and distribution...</li>
-            <li>Reduced weight of suspension sub-system by 4%...</li>
-            <li>Performed Finite Element Analysis...</li>
-          </ul>
-          <img class="project-img" src="assets/images/fsae1.jpg" alt="FSAE Image 1">
-          <img class="project-img" src="assets/images/fsae2.jpg" alt="FSAE Image 2">
-        </div>
-        <!-- More projects can follow this structure -->
+        <a class="clickable" href="fsae.html">Formula SAE – Team Captain & Suspension Lead</a>
+        <!-- Add more projects linking to pages -->
       </div>
     </div>
   </main>
