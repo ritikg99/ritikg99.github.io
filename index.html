@@ -5,6 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ritik Gupta | Portfolio</title>
   <link rel="stylesheet" href="assets/style.css">
+  <style>
+    body { text-align: justify; }
+    .section-wrapper { display: flex; gap: 2rem; margin-top: 2rem; }
+    .experience, .project { flex: 1; }
+    .divider {
+      width: 2px;
+      background: repeating-linear-gradient(
+        to bottom,
+        #3EF3D9,
+        #3EF3D9 4px,
+        transparent 4px,
+        transparent 8px
+      );
+    }
+    .toggle-content { display: none; margin-top: 0.5rem; }
+    .clickable {
+      color: cyan;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .clickable:hover { color: #00ffff; text-decoration: underline; }
+    img.project-img { width: 100%; max-width: 250px; margin-top: 0.5rem; }
+  </style>
+  <script>
+    function toggle(id) {
+      const content = document.getElementById(id);
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </head>
 <body>
   <nav>
@@ -28,63 +58,43 @@
       <li><strong>OS/Software:</strong> Linux, Microsoft Office, PowerPoint, Word</li>
     </ul>
 
-    <h2>Experience</h2>
-    <div class="experience">
-      <h3>TSALLA AEROSPACE – CFD and Design Engineer (Oct 2022 – Jul 2024)</h3>
-      <ul>
-        <li>Reduced simulation setup time by 15–20% using cell sizing techniques.</li>
-        <li>Performed full-cycle CFD on fixed-wing VTOL and propeller design.</li>
-        <li>Designed a quadcopter UAV with CAD tools, GD&T, and FEA.</li>
-        <li>Conducted wind tunnel testing and developed a 6DoF aircraft MATLAB code.</li>
-      </ul>
-      <h4>Intern at TSALLA AEROSPACE</h4>
-      <ul>
-        <li>Improved L/D ratio of UAV by 9.3% through geometry optimizations.</li>
-        <li>Designed and lightweighted UAV components.</li>
-      </ul>
+    <div class="section-wrapper">
+      <div class="experience">
+        <h2>Experience</h2>
+        <a class="clickable" onclick="toggle('exp-tsalla-full')">TSALLA AEROSPACE – CFD and Design Engineer (Oct 2022 – Jul 2024)</a>
+        <div id="exp-tsalla-full" class="toggle-content">
+          <p>Development and improvement of design and aerodynamics of a fixed-wing VTOL and a quadcopter UAV at a defense startup. (Skills/Tools: Ansys Fluent, Structural, Catia V5, Solidworks, MATLAB, surfacing, part design)</p>
+          <ul>
+            <li>Reduced set-up times for simulations by 15-20% through cell sizing methodologies...</li>
+            <li>Involved in complete design of quad-copter UAV...</li>
+            <li>Designed the fuselage of a VTOL UAV...</li>
+            <li>Spearheaded wind tunnel testing...</li>
+            <li>Performed mesh and grid independence studies...</li>
+            <li>Developed a 6DoF aircraft MATLAB code...</li>
+          </ul>
+          <img class="project-img" src="assets/images/tsalla1.jpg" alt="Tsalla Image 1">
+          <img class="project-img" src="assets/images/tsalla2.jpg" alt="Tsalla Image 2">
+        </div>
+        <!-- More experiences can follow this structure -->
+      </div>
 
-      <h3>CAMP-PhyRE Lab, UW – Research Assistant (Jan 2025 – Present)</h3>
-      <ul>
-        <li>Implemented optimization algorithms on acoustic CFD simulations.</li>
-        <li>Achieved 38% reduction in cost function using HPC-based simulations.</li>
-      </ul>
+      <div class="divider"></div>
 
-      <h3>IISc – Research Intern (Aug 2021 – Feb 2022)</h3>
-      <ul>
-        <li>Tested process parameters on a ceramic plate catalyst to reduce erosion.</li>
-      </ul>
-    </div>
-
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Formula SAE – Team Captain & Suspension Lead</h3>
-      <ul>
-        <li>Developed MATLAB code for load transfer & vehicle dynamics.</li>
-        <li>Reduced suspension subsystem weight by 4%, handled CAD and packaging.</li>
-        <li>Performed FEA and selected materials for powertrain components.</li>
-      </ul>
-
-      <h3>Double Row Vortex Generator CFD</h3>
-      <ul>
-        <li>Performed CFD on vortex generators to enhance lift and delay stall.</li>
-        <li><a href="https://aip.scitation.org/doi/10.1063/5.0114097" target="_blank">Read Published Paper</a></li>
-      </ul>
-
-      <h3>High-Lift Wing Optimization using NSGA-II</h3>
-      <ul>
-        <li>Performed CFD and genetic algorithm optimization to improve L/D ratio by 8.2%.</li>
-        <li>Used Ansys Fluent, ICEM, and ModeFrontier.</li>
-      </ul>
-
-      <h3>Navier-Stokes Solver in C++</h3>
-      <ul>
-        <li>Implemented 12 steps to Navier-Stokes to solve cavity and channel flows.</li>
-      </ul>
-
-      <h3>Wind Turbine Blade Design with BEMT</h3>
-      <ul>
-        <li>Developed a BEMT code for aerodynamic design and analysis.</li>
-      </ul>
+      <div class="project">
+        <h2>Projects</h2>
+        <a class="clickable" onclick="toggle('proj-fsae')">Formula SAE – Team Captain & Suspension Lead</a>
+        <div id="proj-fsae" class="toggle-content">
+          <p>Dec. 2018-Feb. 2022</p>
+          <ul>
+            <li>Developed a MATLAB code to calculate the load transfer and distribution...</li>
+            <li>Reduced weight of suspension sub-system by 4%...</li>
+            <li>Performed Finite Element Analysis...</li>
+          </ul>
+          <img class="project-img" src="assets/images/fsae1.jpg" alt="FSAE Image 1">
+          <img class="project-img" src="assets/images/fsae2.jpg" alt="FSAE Image 2">
+        </div>
+        <!-- More projects can follow this structure -->
+      </div>
     </div>
   </main>
 </body>
