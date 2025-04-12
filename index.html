@@ -16,9 +16,10 @@
     }
     .intro-section {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
-      padding: 4rem 2rem 2rem;
+      padding: 6rem 2rem 4rem;
+      gap: 2rem;
     }
     .intro-left {
       flex: 1;
@@ -39,16 +40,15 @@
     }
     .intro-right {
       flex: 2;
-      text-align: center;
     }
     .intro-right h2 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
+      text-align: left;
     }
     .intro-right p {
       font-size: 1rem;
-      max-width: 600px;
-      margin: 0 auto;
+      text-align: justify;
     }
     .scroll-button {
       display: block;
@@ -85,7 +85,7 @@
       align-items: center;
       border-bottom: 1px solid rgba(255,255,255,0.1);
       padding: 1rem 0;
-      height: 170px;
+      height: 200px;
     }
     .entry img {
       width: 150px;
@@ -115,7 +115,7 @@
 </head>
 <body>
   <nav>
-    <div class="logo">Ritik Gupta</div>
+    <div class="logo"><a href="index.html" style="text-decoration:none;color:white;">Ritik Gupta</a></div>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="resume.html">Resume</a></li>
@@ -151,6 +151,27 @@
             <div class="entry-desc">Worked on CFD, CAD, and wind tunnel testing of UAVs at a defense startup incubated at IISc.</div>
           </div>
         </div>
+        <div class="entry">
+          <img src="assets/images/tsalla_quadcopter.jpeg" alt="Quadcopter" />
+          <div class="entry-text">
+            <a class="entry-title" href="tsalla_intern.html">TSALLA AEROSPACE – Intern</a>
+            <div class="entry-desc">Increased L/D ratio of UAV and designed lighter components for a quadcopter UAV.</div>
+          </div>
+        </div>
+        <div class="entry">
+          <img src="assets/images/acoustic.jpeg" alt="Acoustic System" />
+          <div class="entry-text">
+            <a class="entry-title" href="camp_phyre.html">CAMP-PhyRE Lab – Research Assistant</a>
+            <div class="entry-desc">Optimized acoustic simulations using Quasi-Newton and Stochastic algorithms for fish deterrence.</div>
+          </div>
+        </div>
+        <div class="entry">
+          <img src="assets/images/iisc.jpeg" alt="IISc Lab" />
+          <div class="entry-text">
+            <a class="entry-title" href="iisc.html">INDIAN INSTITUTE OF SCIENCE – Research Intern</a>
+            <div class="entry-desc">Tested process parameters on a ceramic plate catalyst to reduce erosion rate.</div>
+          </div>
+        </div>
       </div>
 
       <div class="divider"></div>
@@ -162,6 +183,34 @@
           <div class="entry-text">
             <a class="entry-title" href="fsae.html">Formula SAE – Team Captain & Suspension Lead</a>
             <div class="entry-desc">Led suspension design and vehicle dynamics modeling for Formula Student team.</div>
+          </div>
+        </div>
+        <div class="entry">
+          <img src="assets/images/vortex.jpeg" alt="Vortex Wing" />
+          <div class="entry-text">
+            <a class="entry-title" href="vortex_generators.html">Double Row Vortex Generator CFD</a>
+            <div class="entry-desc">Improved lift-to-drag ratio and stall angle through vortex generator design and CFD.</div>
+          </div>
+        </div>
+        <div class="entry">
+          <img src="assets/images/wing.jpeg" alt="Multi-element Wing" />
+          <div class="entry-text">
+            <a class="entry-title" href="highlift_ga.html">High Lift Wing Optimization using Genetic Algorithm</a>
+            <div class="entry-desc">Optimized multi-element wing geometry using NSGA-II and Ansys Fluent.</div>
+          </div>
+        </div>
+        <div class="entry">
+          <img src="assets/images/code.jpeg" alt="Code Screenshot" />
+          <div class="entry-text">
+            <a class="entry-title" href="navier_stokes_cpp.html">Navier-Stokes Solver in C++</a>
+            <div class="entry-desc">Implemented the 12 steps to Navier-Stokes in C++ for cavity/channel flow problems.</div>
+          </div>
+        </div>
+        <div class="entry">
+          <img src="assets/images/windturbine.jpeg" alt="Wind Turbine Blade" />
+          <div class="entry-text">
+            <a class="entry-title" href="bemt.html">Wind Turbine Blade Design with BEMT</a>
+            <div class="entry-desc">Developed BEMT code for the aerodynamic design of a wind turbine blade.</div>
           </div>
         </div>
       </div>
