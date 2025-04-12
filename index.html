@@ -29,34 +29,35 @@
         transparent 16px
       );
     }
-    .tile {
+    .entry {
+      display: flex;
       background-color: #2e2e2e;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      border-radius: 8px;
-      text-align: center;
-      transition: transform 0.2s ease;
-    }
-    .tile:hover {
-      transform: scale(1.02);
-    }
-    .tile img {
-      max-width: 100%;
       border-radius: 6px;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      height: 130px;
+      overflow: hidden;
     }
-    .tile-title {
+    .entry img {
+      width: 150px;
+      height: 100%;
+      object-fit: cover;
+    }
+    .entry-text {
+      padding: 1rem;
+      flex: 1;
+    }
+    .entry-title {
       color: cyan;
-      font-weight: bold;
       font-size: 1.2rem;
-      margin-bottom: 0.3rem;
+      font-weight: bold;
       text-decoration: none;
     }
-    .tile-title:hover {
+    .entry-title:hover {
       color: #00ffff;
       text-decoration: underline;
     }
-    .tile-desc {
+    .entry-desc {
+      margin-top: 0.5rem;
       font-size: 0.95rem;
       color: #ccc;
     }
@@ -77,28 +78,28 @@
     <div class="section-wrapper">
       <div class="experience">
         <h2>Experience</h2>
-        <a href="tsalla.html">
-          <div class="tile">
-            <img src="assets/images/fixedwing.jpeg" alt="Fixed-wing UAV" />
-            <div class="tile-title">TSALLA AEROSPACE – CFD and Design Engineer</div>
-            <div class="tile-desc">Worked on CFD, CAD, and wind tunnel testing of UAVs at a defense startup incubated at IISc.</div>
+        <div class="entry">
+          <img src="assets/images/fixedwing.jpg" alt="Fixed-wing UAV" />
+          <div class="entry-text">
+            <a class="entry-title" href="tsalla.html">TSALLA AEROSPACE – CFD and Design Engineer</a>
+            <div class="entry-desc">Worked on CFD, CAD, and wind tunnel testing of UAVs at a defense startup incubated at IISc.</div>
           </div>
-        </a>
-        <!-- Add more experience tiles similarly -->
+        </div>
+        <!-- More experiences here -->
       </div>
 
       <div class="divider"></div>
 
       <div class="project">
         <h2>Projects</h2>
-        <a href="fsae.html">
-          <div class="tile">
-            <img src="assets/images/formulacar.jpeg" alt="Formula Student Car" />
-            <div class="tile-title">Formula SAE – Team Captain & Suspension Lead</div>
-            <div class="tile-desc">Led suspension design and vehicle dynamics modeling for Formula Student team.</div>
+        <div class="entry">
+          <img src="assets/images/formulacar.jpg" alt="Formula Student Car" />
+          <div class="entry-text">
+            <a class="entry-title" href="fsae.html">Formula SAE – Team Captain & Suspension Lead</a>
+            <div class="entry-desc">Led suspension design and vehicle dynamics modeling for Formula Student team.</div>
           </div>
-        </a>
-        <!-- Add more project tiles similarly -->
+        </div>
+        <!-- More projects here -->
       </div>
     </div>
   </main>
