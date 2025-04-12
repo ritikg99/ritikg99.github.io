@@ -6,10 +6,61 @@
   <title>Ritik Gupta | Portfolio</title>
   <link rel="stylesheet" href="assets/style.css" />
   <style>
+    body {
+      scroll-behavior: smooth;
+    }
     .main-wide {
       padding: 2rem;
       max-width: 1400px;
       margin: auto;
+    }
+    .intro-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 2rem 2rem;
+    }
+    .intro-left {
+      flex: 1;
+      max-width: 40%;
+    }
+    .intro-left img {
+      width: 100px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .intro-left h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.3rem;
+    }
+    .intro-left h2 {
+      font-size: 1rem;
+      color: #ccc;
+    }
+    .intro-right {
+      flex: 2;
+      text-align: center;
+    }
+    .intro-right h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .intro-right p {
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .scroll-button {
+      display: block;
+      margin: 2rem auto;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      background-color: #3EF3D9;
+      color: #000;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
     }
     .section-wrapper {
       display: flex;
@@ -31,19 +82,18 @@
     }
     .entry {
       display: flex;
-      background-color: #2e2e2e;
-      border-radius: 6px;
-      margin-bottom: 1.5rem;
-      height: 130px;
-      overflow: hidden;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 1rem 0;
+      height: 170px;
     }
     .entry img {
       width: 150px;
       height: 100%;
       object-fit: cover;
+      margin-right: 1rem;
     }
     .entry-text {
-      padding: 1rem;
       flex: 1;
     }
     .entry-title {
@@ -75,17 +125,32 @@
   </nav>
 
   <main class="main-wide">
-    <div class="section-wrapper">
+    <section class="intro-section">
+      <div class="intro-left">
+        <img src="assets/images/profile.jpg" alt="Ritik Gupta" />
+        <h1>Ritik Gupta - Portfolio</h1>
+        <h2>Master's in Mechanical Engineering at University of Washington</h2>
+      </div>
+      <div class="intro-right">
+        <h2>About Me</h2>
+        <p>A methodical and organized engineer with two years of experience as a Computational Fluid Dynamics (CFD) and Design Engineer at a defense aerospace startup which has honed my problem-solving skills and deepened my analytical intuition. I am eager to apply my passion for research and development in an impactful role, leveraging my curiosity to come up with unique engineering solutions in mechanical systems while constantly learning.</p>
+      </div>
+    </section>
+
+    <button class="scroll-button" onclick="document.getElementById('sections').scrollIntoView({ behavior: 'smooth' })">
+      Experience / Projects
+    </button>
+
+    <div id="sections" class="section-wrapper">
       <div class="experience">
         <h2>Experience</h2>
         <div class="entry">
-          <img src="assets/images/fixedwing.jpeg" alt="Fixed-wing UAV" />
+          <img src="assets/images/fixedwing.jpg" alt="Fixed-wing UAV" />
           <div class="entry-text">
             <a class="entry-title" href="tsalla.html">TSALLA AEROSPACE – CFD and Design Engineer</a>
             <div class="entry-desc">Worked on CFD, CAD, and wind tunnel testing of UAVs at a defense startup incubated at IISc.</div>
           </div>
         </div>
-        <!-- More experiences here -->
       </div>
 
       <div class="divider"></div>
@@ -93,13 +158,12 @@
       <div class="project">
         <h2>Projects</h2>
         <div class="entry">
-          <img src="assets/images/formulacar.jpeg" alt="Formula Student Car" />
+          <img src="assets/images/formulacar.jpg" alt="Formula Student Car" />
           <div class="entry-text">
             <a class="entry-title" href="fsae.html">Formula SAE – Team Captain & Suspension Lead</a>
             <div class="entry-desc">Led suspension design and vehicle dynamics modeling for Formula Student team.</div>
           </div>
         </div>
-        <!-- More projects here -->
       </div>
     </div>
   </main>
