@@ -1,6 +1,6 @@
 body {
-  background-color: #2C2C2C; /* Charcoal */
-  color: #E0E0E0; /* Light grey text */
+  background-color: #121212;
+  color: #f5f5f5;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
@@ -53,15 +53,15 @@ nav ul li a {
   width: 2px;
   background: repeating-linear-gradient(
     to bottom,
-    #D6A76D,
-    #D6A76D 6px,
+    #3EF3D9,
+    #3EF3D9 6px,
     transparent 6px,
     transparent 16px
   );
 }
 
 .clickable {
-  color: #D6A76D;
+  color: cyan;
   display: inline-block;
   margin: 1rem 0;
   font-weight: bold;
@@ -70,7 +70,7 @@ nav ul li a {
 }
 
 .clickable:hover {
-  color: #f0c288;
+  color: #00ffff;
   text-decoration: underline;
 }
 
