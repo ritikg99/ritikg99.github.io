@@ -5,28 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TSALLA AEROSPACE – Experience</title>
   <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .detail-container {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      max-width: 1400px;
+      margin-inline: auto;
+      padding: 2rem;
+    }
+    .detail-left {
+      flex: 0.3;
+    }
+    .detail-right {
+      flex: 0.7;
+    }
+    .detail-left img {
+      width: 100%;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+    }
+    .caption {
+      font-size: 0.85rem;
+      color: #bbb;
+      text-align: center;
+      margin-top: -0.8rem;
+      margin-bottom: 1rem;
+    }
+    .top-info {
+      max-width: 1400px;
+      margin: auto;
+      padding: 2rem 2rem 0;
+    }
+    .top-info h1 {
+      font-size: 1.6rem;
+    }
+    .top-info p {
+      font-size: 0.95rem;
+      margin-top: 0.3rem;
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
   <nav>
-    <div class="logo">Ritik Gupta</div>
+    <div class="logo"><a href="index.html" style="text-decoration:none;color:white;">Ritik Gupta</a></div>
     <ul>
       <li><a href="index.html">Home</a></li>
     </ul>
   </nav>
 
-  <main class="main-wide">
-    <h1>TSALLA AEROSPACE – CFD and Design Engineer (Oct 2022 – Jul 2024)</h1>
-    <p>Development and improvement of design and aerodynamics of a fixed-wing VTOL and a quadcopter UAV at a defense startup. (Skills/Tools: Ansys Fluent, Structural, Catia V5, Solidworks, MATLAB, surfacing, part design)</p>
-    <ul>
-      <li>Reduced set-up times for simulations by 15–20% through cell sizing methodologies...</li>
-      <li>Performed CFD analysis on Aircraft and Propeller using transient sliding mesh motion.</li>
-      <li>Involved in design of quadcopter UAV, GD&T, FEA, prototype development.</li>
-      <li>Designed VTOL UAV fuselage with advanced surfacing and integration layout.</li>
-      <li>Led wind tunnel testing from design to results.</li>
-      <li>Created 6DoF MATLAB code for aircraft dynamics with 1 team member.</li>
-    </ul>
-    <img src="assets/images/tsalla1.jpg" alt="Tsalla UAV 1" />
-    <img src="assets/images/tsalla2.jpg" alt="Tsalla UAV 2" />
-  </main>
+  <section class="top-info">
+    <h1>TSALLA AEROSPACE – CFD and Design Engineer (Full-time)</h1>
+    <p>Bangalore</p>
+    <p>October 2022 – July 2024</p>
+  </section>
+
+  <section class="detail-container">
+    <div class="detail-left">
+      <img src="assets/images/ta1.jpeg" alt="Tsalla Image 1" />
+      <div class="caption">VTOL UAV CAD Model</div>
+      <img src="assets/images/ta2.jpeg" alt="Tsalla Image 2" />
+      <div class="caption">Prototype Assembly</div>
+      <img src="assets/images/ta3.jpeg" alt="Tsalla Image 3" />
+      <div class="caption">Wind Tunnel Setup</div>
+      <img src="assets/images/ta4.jpeg" alt="Tsalla Image 4" />
+      <div class="caption">CFD Mesh Comparison</div>
+    </div>
+
+    <div class="detail-right">
+      <p>
+        At TSALLA Aerospace, a defense-focused startup incubated at IISc, I contributed to the aerodynamic development of a fixed-wing VTOL UAV and a quadcopter system. I handled tasks from early-stage conceptual design through to prototype fabrication and testing.
+      </p>
+      <p>
+        I developed and refined 3D CAD models using CATIA V5 and SolidWorks, particularly focusing on battery locking mechanisms, fuselage structure, and landing gear. FEA using Ansys Structural ensured the designs satisfied Factor of Safety requirements under lightweight constraints.
+      </p>
+      <ul>
+        <li>Performed complete CFD analysis of aircraft and propeller using transient sliding mesh techniques.</li>
+        <li>Led the wind tunnel test process—from DFM and fabrication to post-processing of the results.</li>
+      </ul>
+      <p>
+        I implemented mesh and grid independence studies to establish simulation benchmarks and contributed to the development of an in-house 6DoF aircraft dynamics model in MATLAB alongside one teammate. The fast-paced and multi-disciplinary nature of the work honed both my simulation and prototyping skills.
+      </p>
+    </div>
+  </section>
 </body>
 </html>
