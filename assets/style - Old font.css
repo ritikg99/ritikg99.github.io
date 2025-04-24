@@ -1,19 +1,12 @@
-/* ===== GOOGLE FONT ===== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
-/* ===== BASE STYLES ===== */
 body {
-  background-color: #2C2C2C;
-  color: #E0E0E0;
+  background-color: #2C2C2C; /* Charcoal */
+  color: #E0E0E0; /* Light grey text */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   text-align: justify;
-  line-height: 1.7;
-  font-family: 'Inter', sans-serif;
-  letter-spacing: 0.3px;
 }
 
-/* ===== NAVIGATION ===== */
 nav {
   background: linear-gradient(90deg, #1e1e1e 0%, #1e1e1e 50%, #D6A76D 100%);
   padding: 2.5rem 2rem;
@@ -30,7 +23,6 @@ nav .logo {
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
-  font-family: 'Inter', sans-serif;
 }
 
 nav ul {
@@ -48,7 +40,6 @@ nav ul li a {
   transition: color 0.3s ease;
   padding: 0.5rem 0;
   position: relative;
-  font-family: 'Inter', sans-serif;
 }
 
 nav ul li a:hover {
@@ -70,7 +61,6 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-/* ===== MAIN CONTENT ===== */
 .main-wide {
   padding: 2rem;
   max-width: 1400px;
@@ -80,7 +70,7 @@ nav ul li a:hover::after {
 .section-wrapper {
   display: flex;
   gap: 2rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .experience, .project {
@@ -98,78 +88,21 @@ nav ul li a:hover::after {
   );
 }
 
-/* ===== TYPOGRAPHY ===== */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', sans-serif;
-  letter-spacing: 0.3px;
-}
-
 .clickable {
-  color: #b8860b;
+  color: #b8860b; /* Dark copper */
   display: inline-block;
   margin: 1rem 0;
   font-weight: bold;
   font-size: 1.1rem;
   text-decoration: none;
   transition: color 0.3s ease;
-  font-family: 'Inter', sans-serif;
 }
 
 .clickable:hover {
-  color: #f0c288;
+  color: #f0c288; /* Light copper */
   text-decoration: underline;
 }
 
-.entry-title {
-  color: #b8860b;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  font-family: 'Inter', sans-serif;
-}
-
-.entry-title:hover {
-  color: #f0c288;
-  text-decoration: underline;
-}
-
-/* ===== ENTRIES STYLING ===== */
-.entry {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  background-color: rgba(255,255,255,0.02);
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.entry:hover {
-  transform: scale(1.01);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.entry img {
-  width: 300px;
-  height: 100%;
-  object-fit: cover;
-  margin-right: 1rem;
-  border-radius: 4px;
-}
-
-.entry-text {
-  flex: 1;
-}
-
-.entry-desc {
-  margin-top: 0.5rem;
-  font-size: 0.95rem;
-  color: #ccc;
-}
-
-/* ===== IMAGES ===== */
 img {
   height: auto;
   width: 100%;
@@ -178,40 +111,41 @@ img {
   border-radius: 4px;
 }
 
-/* ===== BUTTONS ===== */
+/* Additional improvements */
+.entry-title {
+  color: #b8860b; /* Dark copper */
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.entry-title:hover {
+  color: #f0c288; /* Light copper */
+  text-decoration: underline;
+}
+
 .scroll-button {
   background-color: #D6A76D;
   color: #1e1e1e;
   transition: all 0.3s ease;
-  font-family: 'Inter', sans-serif;
-  padding: 0.8rem 1.8rem;
-  border-radius: 30px;
-  font-size: 1.05rem;
-  font-weight: bold;
-  border: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .scroll-button:hover {
   background-color: #f0c288;
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* ===== MOBILE RESPONSIVENESS ===== */
 @media (max-width: 768px) {
-  body {
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: left;
-  }
-
+  /* 1. Fix navigation layout */
   nav {
     flex-direction: column;
     padding: 1rem;
     text-align: center;
   }
-
+  
   nav ul {
     margin-top: 1rem;
     gap: 1rem;
@@ -219,6 +153,7 @@ img {
     justify-content: center;
   }
 
+  /* 2. Stack intro section vertically */
   .intro-section {
     flex-direction: column;
     padding: 3rem 1rem;
@@ -230,10 +165,11 @@ img {
   }
 
   .intro-left img {
-    width: 150px;
+    width: 150px; /* Smaller profile image on mobile */
     margin: 0 auto 1rem;
   }
 
+  /* 3. Stack experience/projects vertically */
   .section-wrapper {
     flex-direction: column;
   }
@@ -243,7 +179,7 @@ img {
     height: 2px;
     margin: 2rem 0;
     background: repeating-linear-gradient(
-      to right,
+      to right, /* Changed to horizontal for mobile */
       #D6A76D,
       #D6A76D 6px,
       transparent 6px,
@@ -251,6 +187,7 @@ img {
     );
   }
 
+  /* 4. Fix entry layouts */
   .entry {
     flex-direction: column;
     height: auto;
@@ -264,9 +201,17 @@ img {
     margin-bottom: 1rem;
   }
 
+  /* 5. Improve text readability */
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left; /* Better for mobile reading */
+  }
+
   h1 { font-size: 1.8rem; }
   h2 { font-size: 1.4rem; }
 
+  /* 6. Make buttons/touch targets larger */
   .scroll-button, nav ul li a {
     padding: 0.8rem 1.2rem;
   }

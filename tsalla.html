@@ -10,15 +10,15 @@
       display: flex;
       gap: 2rem;
       margin-top: 2rem;
-      max-width: 900px;
+      max-width: 1200px;
       margin-inline: auto;
       padding: 2rem;
     }
     .detail-left {
-      flex: 0.4;
+      flex: 0.3;
     }
     .detail-right {
-      flex: 0.6;
+      flex: 0.7;
     }
     .detail-left img {
       width: 100%;
@@ -45,6 +45,26 @@
       margin-top: 0.3rem;
       color: #ccc;
     }
+
+    .section-button {
+      background-color: rgba(214, 167, 109, 0.2); /* Light copper translucent */
+      border: 1px solid #D6A76D;
+      color: #D6A76D;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 20px;
+      margin: 0.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .section-button:hover {
+      background-color: rgba(240, 194, 136, 0.3);
+      color: #f0c288;
+      transform: translateY(-1px);
+    }
+
   </style>
 </head>
 <body>
@@ -61,9 +81,14 @@
     <p>October 2022 – July 2024</p>
   </section>
 
+  <div style="text-align: center; margin-top: 1rem;">
+    <button onclick="document.getElementById('design').scrollIntoView({ behavior: 'smooth' })" class="section-button">Design</button>
+    <button onclick="document.getElementById('cfd').scrollIntoView({ behavior: 'smooth' })" class="section-button">CFD</button>
+  </div>
+
   <section class="detail-container">
     <div class="detail-left">
-      <img src="assets/images/ta1.jpeg" alt="Tsalla Image 1" />
+      <img src="assets/images/ta_logo2.png" alt="Tsalla Image 1" />
       <!-- <div class="caption">VTOL UAV CAD Model</div> -->
       <img src="assets/images/ta2.jpeg" alt="Tsalla Image 2" />
       <!-- <div class="caption">Prototype Assembly</div> -->
@@ -78,17 +103,41 @@
         <strong>Important: Due to my NDA agreement, I have only included publicly available images and non-confidential details in this page.</strong>
       </p>
       <p>        
-        At TSALLA Aerospace, a defense-focused startup incubated at IISc, I contributed to the design and aerodynamic development of a fixed-wing VTOL UAV and a quadcopter system. I handled tasks from early-stage conceptual design through to prototype fabrication and testing.
+        At Tsalla Aerospace, a defense-focused UAV startup incubated at IISc, I contributed to the design and aerodynamic development of a fixed-wing VTOL UAV and a quadcopter system. I handled tasks from early-stage conceptual design through to prototype fabrication and testing.
+        Since it was a start-up I had the opportunity to work on both, Design and CFD aspects.
+      </p>
+      
+      <h2 id="design">Design and CAD</h2>
+      <p>
+        This is where I learnt everything about product design - going from where fillets are necessary, utilization of ribs at appropriate places to getting an intuition for weight saving cutouts and techniques. I also developed my thought process for Design for Manufacturing and Assembly (I dealt with very complicated assemblies with 40+ components). 
       </p>
       <p>
-        I developed and refined 3D CAD models using CATIA V5 and SolidWorks, particularly focusing on battery locking mechanisms, fuselage structure, and landing gear. FEA using Ansys Structural ensured the designs satisfied Factor of Safety requirements under lightweight constraints.
+        I developed and refined 3D CAD models using CATIA V5 and SolidWorks. Large assemblies, battery locking mechanisms, fuselage structure, and landing gear were some of them. I even performed a couple of FEA simulations under the guidance of the Structural team using Ansys Structural to ensure the designs satisfied Factor of Safety requirements set.
       </p>
-      <ul>
-        <li>Performed complete CFD analysis of aircraft and propeller using transient sliding mesh techniques.</li>
-        <li>Led the wind tunnel test process—from DFM and fabrication to post-processing of the results.</li>
-      </ul>
       <p>
-        I implemented mesh and grid independence studies to establish simulation benchmarks and contributed to the development of an in-house 6DoF aircraft dynamics model in MATLAB alongside one teammate. The fast-paced and multi-disciplinary nature of the work honed both my simulation and prototyping skills.
+        The most intricate and detailed Product Design and 3D modeling work I did here involved the design of fuselage of a UAV through advanced surfacing, part design and assembly. The design involved compact packaging of electronics such as battery, payload, power distribution boards, cabling and various other electronics. It also included a lot of mechanisms for locking and detachment of components. For rapid prototyping, I have extensively worked with SLA, FDM and SLS 3D printers like Formlabs Form 3, Ultimaker S5 and others.
+      </p>
+      <p>
+        The fast-paced and multi-disciplinary nature of the work honed both my design and simulation skills. I came across a lot of design problem statements so often that it not only developed my swiftness and prowess in CAD, it also developed my problem-solving skills for overall design.
+      </p>
+      
+      <h2 id="cfd">CFD and Aerodynamics</h2>
+      <p>  
+        Performed complete CFD analysis of aircraft and propeller using transient sliding mesh techniques. This was used for making more accurate calculations of forces on the UAV. 
+        
+        I implemented mesh and grid independence studies to establish simulation benchmarks which saved about 20% time for a simulation set-up. 
+      </p>
+      <p>  
+        I led and got experience with the wind tunnel test process—from DFM and fabrication to post-processing of the results. Following the wind tunnel tests, I calibrated my CFD simulations by incorporating the appropriate wall roughness factor to align with experimental data. The simulations finally aligned with less than 5% error with the Wind Tunnel results.
+      </p>
+      <p>
+        I contributed to the development of an in-house 6DoF aircraft dynamics model in MATLAB alongside one teammate.
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
       </p>
     </div>
   </section>

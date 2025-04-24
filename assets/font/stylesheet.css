@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Sabon LT Std';
+    src: url('SabonLTStd-Italic.eot');
+    src: local('Sabon LT Std Italic'), local('SabonLTStd-Italic'),
+        url('SabonLTStd-Italic.eot?#iefix') format('embedded-opentype'),
+        url('SabonLTStd-Italic.woff2') format('woff2'),
+        url('SabonLTStd-Italic.woff') format('woff'),
+        url('SabonLTStd-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sabon LT Std';
+    src: url('SabonLTStd-Roman.eot');
+    src: local('Sabon LT Std Roman'), local('SabonLTStd-Roman'),
+        url('SabonLTStd-Roman.eot?#iefix') format('embedded-opentype'),
+        url('SabonLTStd-Roman.woff2') format('woff2'),
+        url('SabonLTStd-Roman.woff') format('woff'),
+        url('SabonLTStd-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sabon LT Std';
+    src: url('SabonLTStd-BoldItalic.eot');
+    src: local('Sabon LT Std Bold Italic'), local('SabonLTStd-BoldItalic'),
+        url('SabonLTStd-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('SabonLTStd-BoldItalic.woff2') format('woff2'),
+        url('SabonLTStd-BoldItalic.woff') format('woff'),
+        url('SabonLTStd-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sabon LT Std';
+    src: url('SabonLTStd-Bold.eot');
+    src: local('Sabon LT Std Bold'), local('SabonLTStd-Bold'),
+        url('SabonLTStd-Bold.eot?#iefix') format('embedded-opentype'),
+        url('SabonLTStd-Bold.woff2') format('woff2'),
+        url('SabonLTStd-Bold.woff') format('woff'),
+        url('SabonLTStd-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

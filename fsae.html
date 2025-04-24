@@ -3,27 +3,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Formula SAE Project</title>
+  <title>DSCE-Motorsports – Formula Student Experience</title>
   <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .detail-container {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      max-width: 1100px;
+      margin-inline: auto;
+      padding: 2rem;
+    }
+    .detail-left {
+      flex: 0.4;
+    }
+    .detail-right {
+      flex: 0.6;
+    }
+    .detail-left img {
+      width: 100%;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+    }
+    .caption {
+      font-size: 0.85rem;
+      color: #bbb;
+      text-align: center;
+      margin-top: -0.8rem;
+      margin-bottom: 1rem;
+    }
+    .top-info {
+      max-width: 600px;
+      margin: auto;
+      padding: 2rem 2rem 0;
+    }
+    .top-info h1 {
+      font-size: 1.6rem;
+    }
+    .top-info p {
+      font-size: 0.95rem;
+      margin-top: 0.3rem;
+      color: #ccc;
+    }
+    .tech-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.5rem 0;
+    }
+    .tech-pill {
+      background-color: rgba(214, 167, 109, 0.2);
+      color: #f0c288;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .content-block {
+      margin-bottom: 1.5rem;
+    }
+  </style>
 </head>
 <body>
   <nav>
-    <div class="logo">Ritik Gupta</div>
+    <div class="logo"><a href="index.html" style="text-decoration:none;color:white;">Ritik Gupta</a></div>
     <ul>
       <li><a href="index.html">Home</a></li>
     </ul>
   </nav>
 
-  <main class="main-wide">
-    <h1>Formula SAE – Team Captain & Suspension Lead (Dec 2018 – Feb 2022)</h1>
-    <ul>
-      <li>Developed MATLAB code to calculate load transfer and suspension behavior.</li>
-      <li>Reduced suspension subsystem weight by 4%, optimized packaging and clearances.</li>
-      <li>Performed FEA and selected materials for powertrain and chassis components.</li>
-      <li>Led design and validation of various components and assemblies in SolidWorks and CATIA V5.</li>
-    </ul>
-    <img src="assets/images/fsae1.jpg" alt="FSAE Car" />
-    <img src="assets/images/fsae2.jpg" alt="FSAE Suspension" />
-  </main>
+  <section class="top-info">
+    <h1>Team Captain and Suspension Lead - DSCE-Motorsports</h1>
+    <p>August 2020 – July 2022</p>
+  </section>
+
+  <section class="detail-container">
+    <div class="detail-left">
+      <img src="assets/images/formulacar-cropped.jpg" alt="Formula Student Car" />
+      <div class="caption">Our Formula Student race car</div>
+      <img src="assets/images/fsae1.png" alt="Suspension CAD" />
+      <div class="caption">Suspension system CAD design</div>
+      <img src="assets/images/fsae2.png" alt="Suspension CAD" />
+      <div class="caption">Suspension system CAD design</div>
+      <img src="assets/images/fsae5.png" alt="Suspension CAD" />
+      <div class="caption">Suspension system CAD design</div>
+      <img src="assets/images/fsae3.png" alt="Suspension CAD" />
+      <div class="caption">Suspension system CAD design</div>
+      <img src="assets/images/fsae7.png" alt="Suspension CAD" />
+      <div class="caption">Suspension system CAD design</div>
+      <img src="assets/images/fsae10.jpg" alt="Suspension CAD" />
+      <div class="caption">Suspension system CAD design</div>
+    </div>
+
+    <div class="detail-right">
+      <div class="content-block">
+        <p>As Team Captain and Suspension Lead for our Formula Student team, I led the design and optimization of the vehicle's critical systems while managing a multidisciplinary team of engineers.</p>
+      </div>
+      
+      <div class="content-block">
+        <h3>Key Achievements:</h3>
+        <ul>
+          <li>Performed CFD simulation of a parametrized intake manifold using Ansys Fluent, achieving measurable reduction in pressure loss</li>
+          <li>Developed suspension geometry from scratch, establishing all hard points and kinematic parameters</li>
+          <li>Created MATLAB code to calculate load transfer and distribution, enabling precise vehicle dynamics modeling</li>
+          <li>Reduced suspension sub-system weight by 4% through design optimization and material selection</li>
+          <li>Handled complete design, packaging, and clearance of components using SolidWorks and CATIA V5</li>
+          <li>Conducted Finite Element Analysis on powertrain components and evaluated various manufacturing methods</li>
+        </ul>
+      </div>
+
+      <div class="content-block">
+        <h3>Technical Responsibilities:</h3>
+        <ul>
+          <li>Led the design and validation of double-wishbone suspension system</li>
+          <li>Optimized A-arm configurations and selected chassis mounting points</li>
+          <li>Collaborated with aerodynamics and powertrain teams for system integration</li>
+          <li>Managed manufacturing process from CAD to final assembly</li>
+        </ul>
+      </div>
+
+      <div class="tech-pills">
+        <span class="tech-pill">SolidWorks</span>
+        <span class="tech-pill">CATIA V5</span>
+        <span class="tech-pill">Ansys Fluent</span>
+        <span class="tech-pill">MATLAB</span>
+        <span class="tech-pill">Vehicle Dynamics</span>
+        <span class="tech-pill">FEA</span>
+        <span class="tech-pill">CFD</span>
+        <span class="tech-pill">Suspension Design</span>
+        <span class="tech-pill">Team Leadership</span>
+      </div>
+    </div>
+  </section>
 </body>
 </html>

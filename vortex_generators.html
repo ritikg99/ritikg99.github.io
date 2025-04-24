@@ -3,30 +3,144 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TSALLA AEROSPACE – Experience</title>
+  <title>Vortex Generators Research – Portfolio</title>
   <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .detail-container {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      max-width: 1100px;
+      margin-inline: auto;
+      padding: 2rem;
+    }
+    .detail-left {
+      flex: 0.4;
+    }
+    .detail-right {
+      flex: 0.6;
+    }
+    .detail-left img {
+      width: 100%;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+    }
+    .caption {
+      font-size: 0.85rem;
+      color: #bbb;
+      text-align: center;
+      margin-top: -0.8rem;
+      margin-bottom: 1rem;
+    }
+    .top-info {
+      max-width: 600px;
+      margin: auto;
+      padding: 2rem 2rem 0;
+    }
+    .top-info h1 {
+      font-size: 1.6rem;
+    }
+    .top-info p {
+      font-size: 0.95rem;
+      margin-top: 0.3rem;
+      color: #ccc;
+    }
+    .tech-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.5rem 0;
+    }
+    .tech-pill {
+      background-color: rgba(214, 167, 109, 0.2);
+      color: #f0c288;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .publication {
+      background-color: rgba(214, 167, 109, 0.1);
+      border-left: 3px solid #D6A76D;
+      padding: 1rem;
+      margin: 1.5rem 0;
+    }
+  </style>
 </head>
 <body>
   <nav>
-    <div class="logo">Ritik Gupta</div>
+    <div class="logo"><a href="index.html" style="text-decoration:none;color:white;">Ritik Gupta</a></div>
     <ul>
       <li><a href="index.html">Home</a></li>
     </ul>
   </nav>
 
-  <main class="main-wide">
-    <h1>TSALLA AEROSPACE – CFD and Design Engineer (Oct 2022 – Jul 2024)</h1>
-    <p>Development and improvement of design and aerodynamics of a fixed-wing VTOL and a quadcopter UAV at a defense startup. (Skills/Tools: Ansys Fluent, Structural, Catia V5, Solidworks, MATLAB, surfacing, part design)</p>
-    <ul>
-      <li>Reduced set-up times for simulations by 15–20% through cell sizing methodologies...</li>
-      <li>Performed CFD analysis on Aircraft and Propeller using transient sliding mesh motion.</li>
-      <li>Involved in design of quadcopter UAV, GD&T, FEA, prototype development.</li>
-      <li>Designed VTOL UAV fuselage with advanced surfacing and integration layout.</li>
-      <li>Led wind tunnel testing from design to results.</li>
-      <li>Created 6DoF MATLAB code for aircraft dynamics with 1 team member.</li>
-    </ul>
-    <img src="assets/images/tsalla1.jpg" alt="Tsalla UAV 1" />
-    <img src="assets/images/tsalla2.jpg" alt="Tsalla UAV 2" />
-  </main>
+  <section class="top-info">
+    <h1>Numerical Investigation of Double Row Vortex Generators</h1>
+    <p>Independent Research Project | 2021</p>
+  </section>
+
+  <section class="detail-container">
+    <div class="detail-left">
+      <img src="assets/images/VGs15.png" alt="Vortex Generator CFD Visualization" />
+      <div class="caption">CAD setup of VGs</div>
+      <img src="assets/images/VGs2.png" alt="Wing with Vortex Generators" />
+      <div class="caption">Illustration of configurations</div>
+      <img src="assets/images/VGs3.png" alt="Wing with Vortex Generators" />
+      <div class="caption">Mesh corss section near VGs</div>
+      <img src="assets/images/VGs7.png" alt="Wing with Vortex Generators" />
+      <div class="caption">Velocity contour behind 1. Single VG vs 2. DVGs</div>
+      <img src="assets/images/VGs14.png" alt="Wing with Vortex Generators" />
+      <div class="caption">Streamlines and Vortex Core regions showing Vortex merger</div>
+      <img src="assets/images/VGs13.png" alt="Wing with Vortex Generators" />
+      <div class="caption">Velocity contrours at different sections</div>
+    </div>
+
+    <div class="detail-right">
+      <p>Vortex Generators are used in various applications to delay stall and improve mixing. My hypothesis was that the vortices from consecutive Vortex Generators would merge to form a stronger one that would better carry momentum till the trailing edge, the region most susceptible to flow separation. Through CFD Simulations, I decided to test this out for different confiturations of Double row Vortex Generators (DVGs). The study aimed to quantify how strategically placed vortex generators could further delay flow separation and improve lift charactersitics through controlled vortex interaction, compared to the conventional single row VGs.</p>
+      
+      <div class="publication">
+        <strong>Published Research:</strong> "Numerical investigation of double row vortex generators on a wing" - <i>AIP Conference Proceedings 2648, 020016 (2022)</i><br>
+        <a href="https://doi.org/10.1063/5.0114097" target="_blank" style="color: #D6A76D;">doi.org/10.1063/5.0114097</a>
+      </div>
+
+      <h3>Key Findings & Achievements:</h3>
+      <ul>
+        <li>Successfully increased wing lift by <strong>3.7%</strong> and improved overall <strong>lift-to-drag ratio by 6%</strong></li>
+        <li>Delayed stall angle by <strong>3 degrees</strong>, significantly improving high-AOA performance</li>
+        <li>Demonstrated vortex merging phenomenon creating stronger, more persistent vortices</li>
+        <li>Published findings in <strong>AIP Conference Proceedings</strong> (DOI: 10.1063/5.0114097)</li>
+      </ul>
+
+      <h3>Technical Approach:</h3>
+      <ul>
+        <li>Developed specialized mesh refinement strategy focusing on high velocity gradient regions behind VGs</li>
+        <li>Implemented Lambda-Q criterion for precise vortex visualization and analysis</li>
+        <li>Tested multiple configurations to optimize vortex generator spacing and alignment</li>
+        <li>Analyzed complex interactions between vortices and boundary layer dynamics</li>
+      </ul>
+
+      
+
+      <h3>Key Learnings:</h3>
+      <ul>
+        <li>Advanced understanding of vortex dynamics and boundary layer interactions</li>
+        <li>Developed expertise in strategic mesh refinement for complex flow features</li>
+        <li>Gained practical experience in turbulence modeling and flow separation control</li>
+        <li>Learned to optimize computational resources through efficient meshing techniques</li>
+      </ul>
+
+      <div class="tech-pills">
+        <span class="tech-pill">CFD</span>
+        <span class="tech-pill">Vortex Dynamics</span>
+        <span class="tech-pill">Aerodynamics</span>
+        <span class="tech-pill">ANSYS Fluent</span>
+        <span class="tech-pill">Mesh Refinement</span>
+        <span class="tech-pill">Flow Separation</span>
+        <span class="tech-pill">Boundary Layer</span>
+        <span class="tech-pill">Research Publication</span>
+      </div>
+    </div>
+  </section>
 </body>
 </html>

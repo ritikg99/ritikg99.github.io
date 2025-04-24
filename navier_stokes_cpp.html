@@ -3,30 +3,163 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TSALLA AEROSPACE – Experience</title>
+  <title>Navier-Stokes Solver – Portfolio</title>
   <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .detail-container {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      max-width: 1100px;
+      margin-inline: auto;
+      padding: 2rem;
+    }
+    .detail-left {
+      flex: 0.4;
+    }
+    .detail-right {
+      flex: 0.6;
+    }
+    .detail-left img {
+      width: 100%;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+    }
+    .caption {
+      font-size: 0.85rem;
+      color: #bbb;
+      text-align: center;
+      margin-top: -0.8rem;
+      margin-bottom: 1rem;
+    }
+    .top-info {
+      max-width: 600px;
+      margin: auto;
+      padding: 2rem 2rem 0;
+    }
+    .top-info h1 {
+      font-size: 1.6rem;
+    }
+    .top-info p {
+      font-size: 0.95rem;
+      margin-top: 0.3rem;
+      color: #ccc;
+    }
+    .tech-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.5rem 0;
+    }
+    .tech-pill {
+      background-color: rgba(214, 167, 109, 0.2);
+      color: #f0c288;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .github-link {
+      margin-top: 2rem;
+    }
+    .github-link a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #f0c288;
+      text-decoration: none;
+      padding: 0.6rem 1rem;
+      border: 1px solid #D6A76D;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+    .github-link a:hover {
+      background-color: rgba(214, 167, 109, 0.1);
+    }
+    .flow-visualization {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .flow-visualization img {
+      width: 100%;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 <body>
   <nav>
-    <div class="logo">Ritik Gupta</div>
+    <div class="logo"><a href="index.html" style="text-decoration:none;color:white;">Ritik Gupta</a></div>
     <ul>
       <li><a href="index.html">Home</a></li>
     </ul>
   </nav>
 
-  <main class="main-wide">
-    <h1>TSALLA AEROSPACE – CFD and Design Engineer (Oct 2022 – Jul 2024)</h1>
-    <p>Development and improvement of design and aerodynamics of a fixed-wing VTOL and a quadcopter UAV at a defense startup. (Skills/Tools: Ansys Fluent, Structural, Catia V5, Solidworks, MATLAB, surfacing, part design)</p>
-    <ul>
-      <li>Reduced set-up times for simulations by 15–20% through cell sizing methodologies...</li>
-      <li>Performed CFD analysis on Aircraft and Propeller using transient sliding mesh motion.</li>
-      <li>Involved in design of quadcopter UAV, GD&T, FEA, prototype development.</li>
-      <li>Designed VTOL UAV fuselage with advanced surfacing and integration layout.</li>
-      <li>Led wind tunnel testing from design to results.</li>
-      <li>Created 6DoF MATLAB code for aircraft dynamics with 1 team member.</li>
-    </ul>
-    <img src="assets/images/tsalla1.jpg" alt="Tsalla UAV 1" />
-    <img src="assets/images/tsalla2.jpg" alt="Tsalla UAV 2" />
-  </main>
+  <section class="top-info">
+    <h1>Navier-Stokes Solver in C++</h1>
+    <p>Scientific Computing Project | 2023</p>
+  </section>
+
+  <section class="detail-container">
+    <div class="detail-left">
+      
+      <img src="assets/images/Step11.png" alt="Cavity Flow Simulation" />
+      <div class="caption">Cavity flow - Vectors</div>
+      <img src="assets/images/Step12.png" alt="C++ Implementation" />
+      <div class="caption">Channel flow - Vectors </div>
+    </div>
+
+    <div class="detail-right">
+      <p>Implementation of the "12 Steps to Navier-Stokes Equations" by Prof. Lorena A. Barba, originally developed in Python, ported to C++ as a hands-on introduction to scientific computing fundamentals.</p>
+      
+      <div class="github-link">
+        <a href="https://github.com/ritikg99/Navier-Stokes-Solver-CPP" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          View C++ Implementation on GitHub
+        </a>
+      </div>
+
+      <h3>Key Aspects Covered:</h3>
+      <ul>
+        <li>Step-by-step progression from basic diffusion to full Navier-Stokes solutions</li>
+        <li>Implemented fundamental numerical methods for fluid flow simulation</li>
+        <li>Solved both cavity flow and channel flow problems</li>
+        <li>Developed versions in both C++ and Python for comparison</li>
+      </ul>
+
+      <h3>Technical Implementation:</h3>
+      <ul>
+        <li>Core C++ concepts: arrays, pointers, function definitions</li>
+        <li>Spatial and temporal discretization techniques</li>
+        <li>Implementation of various boundary conditions</li>
+        <li>Finite difference methods for PDE solutions</li>
+        <li>Visualization of velocity and pressure fields</li>
+      </ul>
+
+      <h3>Learning Outcomes:</h3>
+      <ul>
+        <li>Deeper understanding of CFD mathematical foundations</li>
+        <li>Practical experience with numerical methods implementation</li>
+        <li>Comparison of Python vs. C++ for scientific computing</li>
+        <li>Hands-on experience with stability criteria and convergence</li>
+        <li>Application to classic benchmark problems (cavity/channel flows)</li>
+      </ul>
+
+      <div class="tech-pills">
+        <span class="tech-pill">C++</span>
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">Navier-Stokes</span>
+        <span class="tech-pill">Computational Fluid Dynamics</span>
+        <span class="tech-pill">Numerical Methods</span>
+        <span class="tech-pill">Scientific Computing</span>
+        <span class="tech-pill">Finite Differences</span>
+      </div>
+
+      
+    </div>
+  </section>
 </body>
 </html>

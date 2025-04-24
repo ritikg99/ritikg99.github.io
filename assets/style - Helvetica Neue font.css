@@ -1,6 +1,3 @@
-/* ===== GOOGLE FONT ===== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
 /* ===== BASE STYLES ===== */
 body {
   background-color: #2C2C2C;
@@ -8,9 +5,8 @@ body {
   margin: 0;
   padding: 0;
   text-align: justify;
-  line-height: 1.7;
-  font-family: 'Inter', sans-serif;
-  letter-spacing: 0.3px;
+  line-height: 1.6;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* ===== NAVIGATION ===== */
@@ -30,7 +26,7 @@ nav .logo {
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
-  font-family: 'Inter', sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 nav ul {
@@ -48,7 +44,7 @@ nav ul li a {
   transition: color 0.3s ease;
   padding: 0.5rem 0;
   position: relative;
-  font-family: 'Inter', sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 nav ul li a:hover {
@@ -80,7 +76,7 @@ nav ul li a:hover::after {
 .section-wrapper {
   display: flex;
   gap: 2rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .experience, .project {
@@ -100,8 +96,7 @@ nav ul li a:hover::after {
 
 /* ===== TYPOGRAPHY ===== */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', sans-serif;
-  letter-spacing: 0.3px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .clickable {
@@ -112,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.1rem;
   text-decoration: none;
   transition: color 0.3s ease;
-  font-family: 'Inter', sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .clickable:hover {
@@ -126,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
-  font-family: 'Inter', sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .entry-title:hover {
@@ -134,40 +129,9 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
 }
 
-/* ===== ENTRIES STYLING ===== */
-.entry {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  background-color: rgba(255,255,255,0.02);
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.entry:hover {
-  transform: scale(1.01);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.entry img {
-  width: 300px;
-  height: 100%;
-  object-fit: cover;
-  margin-right: 1rem;
-  border-radius: 4px;
-}
-
-.entry-text {
-  flex: 1;
-}
-
-.entry-desc {
-  margin-top: 0.5rem;
-  font-size: 0.95rem;
-  color: #ccc;
-}
+/* h1, h2, h3 {
+  font-family: 'Sabon', 'Georgia', serif;
+} */
 
 /* ===== IMAGES ===== */
 img {
@@ -183,35 +147,28 @@ img {
   background-color: #D6A76D;
   color: #1e1e1e;
   transition: all 0.3s ease;
-  font-family: 'Inter', sans-serif;
-  padding: 0.8rem 1.8rem;
-  border-radius: 30px;
-  font-size: 1.05rem;
-  font-weight: bold;
-  border: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .scroll-button:hover {
   background-color: #f0c288;
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* ===== MOBILE RESPONSIVENESS ===== */
 @media (max-width: 768px) {
+  /* Navigation */
   body {
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: left;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
-
+  
   nav {
     flex-direction: column;
     padding: 1rem;
     text-align: center;
   }
-
+  
   nav ul {
     margin-top: 1rem;
     gap: 1rem;
@@ -219,6 +176,7 @@ img {
     justify-content: center;
   }
 
+  /* Intro section */
   .intro-section {
     flex-direction: column;
     padding: 3rem 1rem;
@@ -234,6 +192,7 @@ img {
     margin: 0 auto 1rem;
   }
 
+  /* Layout adjustments */
   .section-wrapper {
     flex-direction: column;
   }
@@ -251,6 +210,7 @@ img {
     );
   }
 
+  /* Entry layouts */
   .entry {
     flex-direction: column;
     height: auto;
@@ -264,9 +224,17 @@ img {
     margin-bottom: 1rem;
   }
 
+  /* Typography */
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+  }
+
   h1 { font-size: 1.8rem; }
   h2 { font-size: 1.4rem; }
 
+  /* Touch targets */
   .scroll-button, nav ul li a {
     padding: 0.8rem 1.2rem;
   }

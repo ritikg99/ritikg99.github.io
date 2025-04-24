@@ -3,30 +3,191 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TSALLA AEROSPACE – Experience</title>
+  <title>Wind Turbine Blade Design – Portfolio</title>
   <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .detail-container {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      max-width: 1100px;
+      margin-inline: auto;
+      padding: 2rem;
+    }
+    .detail-left {
+      flex: 0.4;
+    }
+    .detail-right {
+      flex: 0.6;
+    }
+    .detail-left img {
+      width: 100%;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+    }
+    .caption {
+      font-size: 0.85rem;
+      color: #bbb;
+      text-align: center;
+      margin-top: -0.8rem;
+      margin-bottom: 1rem;
+    }
+    .top-info {
+      max-width: 600px;
+      margin: auto;
+      padding: 2rem 2rem 0;
+    }
+    .top-info h1 {
+      font-size: 1.6rem;
+    }
+    .top-info p {
+      font-size: 0.95rem;
+      margin-top: 0.3rem;
+      color: #ccc;
+    }
+    .tech-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.5rem 0;
+    }
+    .tech-pill {
+      background-color: rgba(214, 167, 109, 0.2);
+      color: #f0c288;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .methodology-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .methodology-card {
+      background-color: rgba(214, 167, 109, 0.1);
+      padding: 1rem;
+      border-radius: 4px;
+    }
+    .code-output {
+      font-family: monospace;
+      background-color: rgba(0,0,0,0.3);
+      padding: 1rem;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+  </style>
 </head>
 <body>
   <nav>
-    <div class="logo">Ritik Gupta</div>
+    <div class="logo"><a href="index.html" style="text-decoration:none;color:white;">Ritik Gupta</a></div>
     <ul>
       <li><a href="index.html">Home</a></li>
     </ul>
   </nav>
 
-  <main class="main-wide">
-    <h1>TSALLA AEROSPACE – CFD and Design Engineer (Oct 2022 – Jul 2024)</h1>
-    <p>Development and improvement of design and aerodynamics of a fixed-wing VTOL and a quadcopter UAV at a defense startup. (Skills/Tools: Ansys Fluent, Structural, Catia V5, Solidworks, MATLAB, surfacing, part design)</p>
-    <ul>
-      <li>Reduced set-up times for simulations by 15–20% through cell sizing methodologies...</li>
-      <li>Performed CFD analysis on Aircraft and Propeller using transient sliding mesh motion.</li>
-      <li>Involved in design of quadcopter UAV, GD&T, FEA, prototype development.</li>
-      <li>Designed VTOL UAV fuselage with advanced surfacing and integration layout.</li>
-      <li>Led wind tunnel testing from design to results.</li>
-      <li>Created 6DoF MATLAB code for aircraft dynamics with 1 team member.</li>
-    </ul>
-    <img src="assets/images/tsalla1.jpg" alt="Tsalla UAV 1" />
-    <img src="assets/images/tsalla2.jpg" alt="Tsalla UAV 2" />
-  </main>
+  <section class="top-info">
+    <h1>Wind Turbine Blade Design with BEMT and CFD</h1>
+    <p>Aerodynamic Design Project | 2021</p>
+  </section>
+
+  <section class="detail-container">
+    <div class="detail-left">
+      <img src="assets/images/MP1.png" alt="Blade Element Design" />
+      <div class="caption">Blade element cross-sections showing twist variation</div>
+      <img src="assets/images/MP2.png" alt="CFD Simulation" />
+      <div class="caption">Domain with blade</div>
+      <img src="assets/images/MP4.png" alt="CFD Simulation" />
+      <div class="caption">Mesh refinement near the Blade tip</div>
+      <img src="assets/images/MP6.png" alt="CFD Simulation" />
+      <div class="caption">Vorticity visualization in the wake</div>
+    </div>
+
+    <div class="detail-right">
+      <p>This project involved the complete aerodynamic design and validation of a wind turbine blade using Blade Element Momentum Theory (BEMT) implemented in MATLAB, followed by CFD verification. The design process accounted for real-world aerodynamic losses while optimizing for maximum power extraction within the Betz limit.</p>
+      
+      <div class="github-link" style="margin-top: 2rem;">
+        <a href="https://github.com/ritikg99/BEMT-code-Project_Wind-Turbine" target="_blank" 
+           style="display: inline-flex; align-items: center; gap: 0.5rem;
+                  color: #f0c288; text-decoration: none;
+                  padding: 0.6rem 1rem;
+                  border: 1px solid #D6A76D;
+                  border-radius: 4px;
+                  transition: all 0.3s ease;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          View BEMT Code on GitHub
+        </a>
+      </div>
+
+      <h3>Methodology:</h3>
+      <div class="methodology-grid">
+        <div class="methodology-card">
+          <h4>BEMT Implementation</h4>
+          <ul>
+            <li>Developed MATLAB code implementing BEMT equations</li>
+            <li>Divided blade into 20 aerodynamic sections</li>
+            <li>Iterative convergence for induction factors</li>
+            <li>Incorporated Prandtl's tip loss correction</li>
+          </ul>
+        </div>
+        <div class="methodology-card">
+          <h4>CFD Validation</h4>
+          <ul>
+            <li>Created 3D CAD model from BEMT outputs</li>
+            <li>Performed transient analysis with sliding mesh</li>
+            <li>Compared performance with theoretical predictions</li>
+            <li>Visualized flow separation and pressure distribution</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Key Features:</h3>
+      <ul>
+        <li>The BEMT code accounted for:
+          <ul>
+            <li>Axial induction factor (a)</li>
+            <li>Tangential induction factor (a')</li>
+            <li>Prandtl tip loss factor</li>
+          </ul>
+        </li>
+        <li>Automated iterative convergence for each blade section</li>
+        <li>Output twist angle and chord length distributions</li>
+        <li>Calculated overall power coefficient (C<sub>P</sub>) and torque</li>
+      </ul>
+
+      <!-- <div class="code-output">
+        <strong>Sample Output:</strong><br>
+        Section 10: Chord=0.42m, Twist=8.7°<br>
+        Section 15: Chord=0.38m, Twist=5.2°<br>
+        Power Coefficient: 0.48 (82% of Betz limit)<br>
+        Max Torque: 1240 Nm @ 12m/s
+      </div>
+
+      <h3>Results & Validation:</h3>
+      <ul>
+        <li>Designed blade achieved 82% of Betz limit efficiency</li>
+        <li>CFD results matched BEMT predictions within 8% error</li>
+        <li>Identified optimal twist distribution reducing tip losses</li>
+        <li>Validated pressure distribution across blade span</li>
+      </ul> -->
+
+      <div class="tech-pills">
+        <span class="tech-pill">Blade Element Momentum Theory</span>
+        <span class="tech-pill">MATLAB</span>
+        <span class="tech-pill">CFD</span>
+        <span class="tech-pill">Aerodynamic Design</span>
+        <span class="tech-pill">Wind Energy</span>
+        <span class="tech-pill">Turbomachinery</span>
+        <span class="tech-pill">Sliding Mesh</span>
+        <span class="tech-pill">Betz Limit</span>
+      </div>
+
+      
+    </div>
+  </section>
 </body>
 </html>
+
