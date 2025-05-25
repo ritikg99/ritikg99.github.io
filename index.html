@@ -83,15 +83,15 @@
     }
     .entry {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       border-bottom: 1px solid rgba(255,255,255,0.1);
       padding: 1rem 0;
-      min-height: 150px;
+      height: 200px;
       gap: 1rem;
     }
     .entry img {
-      width: 150px;
-      height: 100px;
+      width: 300px;
+      height: 100%;
       object-fit: cover;
       flex-shrink: 0;
     }
@@ -205,6 +205,126 @@
         font-size: 0.85rem;
       }
     }
+
+    /* ===== CONTACT SECTION ===== */
+    .contact-section {
+      margin-top: 4rem;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, rgba(214, 167, 109, 0.1) 0%, rgba(214, 167, 109, 0.05) 100%);
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .contact-container h2 {
+      font-size: 2rem;
+      color: #D6A76D;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    .contact-container p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      min-width: 250px;
+    }
+
+    .contact-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(214, 167, 109, 0.2);
+      border-color: rgba(214, 167, 109, 0.3);
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+
+    .email-link .contact-icon {
+      background-color: #D6A76D;
+      color: #1e1e1e;
+    }
+
+    .linkedin-link .contact-icon {
+      background-color: #0077b5;
+      color: white;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .contact-label {
+      font-size: 0.9rem;
+      color: #999;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-value {
+      font-size: 1.1rem;
+      color: #E0E0E0;
+      font-weight: 500;
+    }
+
+    /* Mobile responsive contact section */
+    @media screen and (max-width: 768px) {
+      .contact-section {
+        margin-top: 3rem;
+        padding: 2rem 1rem;
+      }
+
+      .contact-container h2 {
+        font-size: 1.7rem;
+      }
+
+      .contact-container p {
+        font-size: 1rem;
+      }
+
+      .contact-links {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-link {
+        min-width: 280px;
+        max-width: 350px;
+      }
+    }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZML3CY0F9N"></script>
@@ -224,6 +344,7 @@
       <li><a href="resume.html">Resume</a></li>
       <li><a href="https://github.com/ritikg99" target="_blank">GitHub</a></li>
       <li><a href="https://www.linkedin.com/in/ritik-gupta99" target="_blank">LinkedIn</a></li>
+      <li><a href="#contact" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Contact</a></li>
     </ul>
   </nav>
 
@@ -232,11 +353,11 @@
       <div class="intro-left">
         <img src="assets/images/profile.jpg" alt="Ritik Gupta" />
         <h1>Ritik Gupta - Portfolio</h1>
-        <h2>Master's in Mechanical Engineering at University of Washington</h2>
+        <h2>Master's in Mechanical Engineering<br><span style="color: #c595de;">University of Washington</span></h2>
       </div>
       <div class="intro-right">
         <h2>About Me</h2>
-        <p>I'm a Mechanical Engineer with a strong foundation in both ,<strong>Computational Fluid Dynamics (CFD)</strong> and <strong>Product Design</strong>. My professional experience spans advanced simulation and thermal-fluids analysis, as well as end-to-end mechanical design, CAD modeling, and FEA. At Tsalla Aerospace, I worked extensively on product development, alongside CFD  in a fast-paced defense startup environment. My hands-on design and structural analysis experience is also shaped by my leadership in Formula SAE and various other interdisciplinary projects. I'm currently working as a Research Assistant on Optimization and Simulations at a Lab in the University of Washington.</p>
+        <p>I'm a Mechanical Engineer with a strong foundation in both, <strong>Computational Fluid Dynamics (CFD)</strong> and <strong>Product Design</strong>. My professional experience spans advanced simulation and fluids-thermals analysis, as well as end-to-end mechanical design, CAD modeling, and FEA. At Tsalla Aerospace, I worked extensively on product development, alongside CFD  in a fast-paced defense startup environment. My hands-on design and analysis experience is also shaped by my leadership in Formula SAE and various other interdisciplinary projects. I'm currently working as a Research Assistant on Optimization and Simulations in a Lab at the University of Washington.</p>
       </div>
     </section>
 
@@ -265,14 +386,14 @@
           <img src="assets/images/RAlab1.png" alt="Acoustic System" />
           <div class="entry-text">
             <a class="entry-title" href="camp_phyre.html">CAMP-PhyRE Lab – Research Assistant</a>
-            <div class="entry-desc"><em>Jan 2024 – Present</em><br>Optimized acoustic simulations using Quasi-Newton and Stochastic algorithms for fish deterrence.</div>
+            <div class="entry-desc"><em>Jan 2024 – Present</em><br>Working on optimizaing an Acoustic Fish Deterrence System using Quasi-Newton and Stochastic algorithms on Simulation data.</div>
           </div>
         </div>
         <div class="entry">
           <img src="assets/images/IISc1.png" alt="IISc Lab" />
           <div class="entry-text">
             <a class="entry-title" href="iisc.html">INDIAN INSTITUTE OF SCIENCE – Research Intern</a>
-            <div class="entry-desc"><em>Jun 2019 – Jul 2019</em><br>Tested process parameters on a ceramic plate catalyst to reduce erosion rate.</div>
+            <div class="entry-desc"><em>Jun 2019 – Jul 2019</em><br>Tested different process parameters on a ceramic plate catalyst to reduce erosion rate.</div>
           </div>
         </div>
       </div>
@@ -323,6 +444,32 @@
         </div>
       </div>
     </div>
+
+    <!-- Contact Me Section -->
+    <section id="contact" class="contact-section">
+      <div class="contact-container">
+        <h2>Contact Me</h2>
+        <p>I'd love to hear from you! Whether you have questions about my work, want to discuss potential opportunities, or just want to connect, feel free to reach out.</p>
+        
+        <div class="contact-links">
+          <a href="mailto:ritikg99@outlook.com" class="contact-link email-link">
+            <div class="contact-icon">✉</div>
+            <div class="contact-info">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">ritikg99@outlook.com</span>
+            </div>
+          </a>
+          
+          <a href="https://www.linkedin.com/in/ritik-gupta99" target="_blank" class="contact-link linkedin-link">
+            <div class="contact-icon">in</div>
+            <div class="contact-info">
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">Connect with me</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 </html>

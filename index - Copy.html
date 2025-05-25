@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ritik Gupta | Portfolio</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+    .main-wide {
+      padding: 2rem;
+      max-width: 1400px;
+      margin: auto;
+    }
+    .intro-section {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 3rem 2rem 3rem;
+      gap: 2rem;
+    }
+    .intro-left {
+      flex: 1;
+      max-width: 40%;
+    }
+    .intro-left img {
+      width: 250px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .intro-left h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.3rem;
+    }
+    .intro-left h2 {
+      font-size: 1rem;
+      color: #ccc;
+    }
+    .intro-right {
+      flex: 2;
+    }
+    .intro-right h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+    .intro-right p {
+      font-size: 1rem;
+      text-align: justify;
+    }
+    .scroll-button {
+      display: block;
+      margin: 2rem auto;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      background-color: #D6A76D;
+      color: #000;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .section-wrapper {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .experience, .project {
+      flex: 1;
+    }
+    .divider {
+      width: 2px;
+      background: repeating-linear-gradient(
+        to bottom,
+        #D6A76D,
+        #D6A76D 6px,
+        transparent 6px,
+        transparent 16px
+      );
+    }
+    .entry {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 1rem 0;
+      height: 200px;
+    }
+    .entry img {
+      width: 300px;
+      height: 100%;
+      object-fit: cover;
+      margin-right: 1rem;
+    }
+    .entry-text {
+      flex: 1;
+    }
+    .entry-title {
+      /* color: cyan; */
+      /* color: #D6A76D */
+      color: #b8860b;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .entry-title:hover {
+      /* color: #00ffff; */
+      color: #f0c288;
+      text-decoration: underline;
+    }
+    .entry-desc {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZML3CY0F9N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZML3CY0F9N');
+  </script>
+</head>
+<body>
+  <nav>
+    <div class="logo"><a href="index.html" style="text-decoration:none;color:white;">Ritik Gupta</a></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="https://github.com/ritikg99" target="_blank">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/ritik-gupta99" target="_blank">LinkedIn</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-wide">
+    <section class="intro-section">
+      <div class="intro-left">
+        <img src="assets/images/profile.jpg" alt="Ritik Gupta" />
+        <h1>Ritik Gupta - Portfolio</h1>
+        <h2>Master's in Mechanical Engineering at University of Washington</h2>
+      </div>
+      <div class="intro-right">
+        <h2>About Me</h2>
+        <p>I’m a Mechanical Engineer with a strong foundation in both ,<strong>Computational Fluid Dynamics (CFD)</strong> and <strong>Product Design</strong>. My professional experience spans advanced simulation and thermal-fluids analysis, as well as end-to-end mechanical design, CAD modeling, and FEA. At Tsalla Aerospace, I worked extensively on product development, alongside CFD  in a fast-paced defense startup environment. My hands-on design and structural analysis experience is also shaped by my leadership in Formula SAE and various other interdisciplinary projects. I’m currently working as a Research Assistant on Optimization and Simulations at a Lab in the University of Washington.</p>
+      </div>
+    </section>
+
+    <button class="scroll-button" onclick="document.getElementById('sections').scrollIntoView({ behavior: 'smooth' })">
+      Experience / Projects
+    </button>
+
+    <div id="sections" class="section-wrapper">
+      <div class="experience">
+        <h2>Experience</h2>
+        <div class="entry">
+          <img src="assets/images/ta_logo.jpeg" alt="Fixed-wing UAV" />
+          <div class="entry-text">
+            <a class="entry-title" href="tsalla.html">TSALLA AEROSPACE – CFD and Design Engineer</a>
+            <div class="entry-desc"><em>Feb 2022 – Jul 2023</em><br>Worked on CFD, CAD, and wind tunnel testing of UAVs at a defense startup incubated at IISc.</div>
+          </div>
+        </div>
+        <div class="entry">
+          <img src="assets/images/ta_logo.jpeg" alt="Quadcopter" />
+          <div class="entry-text">
+            <a class="entry-title" href="tsalla_intern.html">TSALLA AEROSPACE – CFD and Design Intern</a>
+            <em>Sep 2021 – Jan 2022</em><br>Increased L/D ratio of UAV and designed lighter components for a quadcopter UAV.
+          </div>
+        </div>
+        <div class="entry">
+          <img src="assets/images/RAlab1.png" alt="Acoustic System" />
+          <div class="entry-text">
+            <a class="entry-title" href="camp_phyre.html">CAMP-PhyRE Lab – Research Assistant</a>
+            <em>Jan 2024 – Present</em><br>Optimized acoustic simulations using Quasi-Newton and Stochastic algorithms for fish deterrence.
+          </div>
+        </div>
+        <div class="entry">
+          <img src="assets/images/IISc1.png" alt="IISc Lab" />
+          <div class="entry-text">
+            <a class="entry-title" href="iisc.html">INDIAN INSTITUTE OF SCIENCE – Research Intern</a>
+            <em>Jun 2019 – Jul 2019</em><br>Tested process parameters on a ceramic plate catalyst to reduce erosion rate.
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="project">
+        <h2>Projects</h2>
+        <div class="entry">
+          <img src="assets/images/formulacar-cropped.jpg" alt="Formula Student Car" />
+          <div class="entry-text">
+            <a class="entry-title" href="fsae.html">DSCE-Motorsports (Formula SAE) – Team Captain & Suspension Lead</a>
+            <em>Aug 2017 – Jul 2019</em><br>Led suspension design and vehicle dynamics modeling for Formula Student team.
+          </div>
+        </div>
+        <div class="entry">
+          <img src="assets/images/VGs13.png" alt="Vortex Wing" />
+          <div class="entry-text">
+            <a class="entry-title" href="vortex_generators.html">Numerical Investigation of Double Row Vortex Generators</a>
+            <div class="entry-desc">
+              <em>Jul 2021 – Dec 2021</em><br>Implemented a novel concept of two rows of Vortex Generators in various configurations to improve lift-to-drag ratio and delay stall. 
+              <br />
+              <a href="https://pubs.aip.org/aip/acp/article-abstract/2648/1/020016/2831426/Numerical-investigation-of-double-row-vortex?redirectedFrom=fulltext" target="_blank" style="font-size: 0.9rem; color: #4da6ff;">Read Published Paper</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="entry">
+          <img src="assets/images/FP7.png" alt="Multi-element Wing" />
+          <div class="entry-text">
+            <a class="entry-title" href="highlift_ga.html">Optimization of High Lift device of a Multi-Element Wing using Genetic Algorithm</a>
+            <em>Jan 2022 – Jun 2022</em><br>Optimized the flap position of a multi-element wing for high lift configuration using NSGA-II (a Genetic Algorithm) and used Ansys Fluent for simulations.
+          </div>
+        </div>
+        <div class="entry">
+          <img src="assets/images/NSE_CPP.png" alt="Code Screenshot" />
+          <div class="entry-text">
+            <a class="entry-title" href="navier_stokes_cpp.html">Navier-Stokes Solver in C++</a>
+            <em>Aug 2023 – Sep 2023</em><br>Implemented the 12 steps to Navier-Stokes in C++ for cavity/channel flow problems. This provided me with an hands on introduction to C++ for Scientific Computing.
+          </div>
+        </div>
+        <div class="entry">
+          <img src="assets/images/MP1.png" alt="Wind Turbine Blade" />
+          <div class="entry-text">
+            <a class="entry-title" href="bemt.html">Wind Turbine Blade Design with BEMT and CFD Simulation</a>
+            <em>Jul 2022 – Aug 2022</em><br>Developed a MATLAB code based on Blade Element Momentum Theory (BEMT) for the design of a wind turbine blade and performed CFD analysis for validation.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
