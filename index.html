@@ -83,31 +83,31 @@
     }
     .entry {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       border-bottom: 1px solid rgba(255,255,255,0.1);
       padding: 1rem 0;
-      height: 200px;
+      min-height: 150px;
+      gap: 1rem;
     }
     .entry img {
-      width: 300px;
-      height: 100%;
+      width: 150px;
+      height: 100px;
       object-fit: cover;
-      margin-right: 1rem;
+      flex-shrink: 0;
     }
     .entry-text {
       flex: 1;
     }
     .entry-title {
-      /* color: cyan; */
-      /* color: #D6A76D */
       color: #b8860b;
       font-size: 1.1rem;
       font-weight: bold;
       text-decoration: none;
       transition: color 0.3s ease;
+      display: block;
+      margin-bottom: 0.5rem;
     }
     .entry-title:hover {
-      /* color: #00ffff; */
       color: #f0c288;
       text-decoration: underline;
     }
@@ -115,6 +115,95 @@
       margin-top: 0.5rem;
       font-size: 0.95rem;
       color: #ccc;
+      line-height: 1.4;
+    }
+
+    /* Mobile Responsive Styles */
+    @media screen and (max-width: 768px) {
+      .main-wide {
+        padding: 1rem;
+      }
+      
+      .intro-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+      }
+      
+      .intro-left {
+        max-width: 100%;
+        margin-bottom: 2rem;
+      }
+      
+      .intro-left img {
+        width: 200px;
+      }
+      
+      .intro-right h2 {
+        text-align: center;
+      }
+      
+      .section-wrapper {
+        flex-direction: column;
+        gap: 3rem;
+      }
+      
+      .divider {
+        display: none;
+      }
+      
+      .entry {
+        flex-direction: column;
+        min-height: auto;
+        text-align: center;
+        padding: 1.5rem 0;
+      }
+      
+      .entry img {
+        width: 100%;
+        max-width: 300px;
+        height: 180px;
+        margin: 0 auto 1rem auto;
+      }
+      
+      .entry-text {
+        text-align: left;
+      }
+      
+      .entry-title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      .entry-desc {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .intro-left img {
+        width: 150px;
+      }
+      
+      .intro-left h1 {
+        font-size: 1.3rem;
+      }
+      
+      .intro-right h2 {
+        font-size: 1.3rem;
+      }
+      
+      .entry img {
+        height: 150px;
+      }
+      
+      .entry-title {
+        font-size: 0.95rem;
+      }
+      
+      .entry-desc {
+        font-size: 0.85rem;
+      }
     }
   </style>
   <!-- Google tag (gtag.js) -->
@@ -147,7 +236,7 @@
       </div>
       <div class="intro-right">
         <h2>About Me</h2>
-        <p>I’m a Mechanical Engineer with a strong foundation in both ,<strong>Computational Fluid Dynamics (CFD)</strong> and <strong>Product Design</strong>. My professional experience spans advanced simulation and thermal-fluids analysis, as well as end-to-end mechanical design, CAD modeling, and FEA. At Tsalla Aerospace, I worked extensively on product development, alongside CFD  in a fast-paced defense startup environment. My hands-on design and structural analysis experience is also shaped by my leadership in Formula SAE and various other interdisciplinary projects. I’m currently working as a Research Assistant on Optimization and Simulations at a Lab in the University of Washington.</p>
+        <p>I'm a Mechanical Engineer with a strong foundation in both ,<strong>Computational Fluid Dynamics (CFD)</strong> and <strong>Product Design</strong>. My professional experience spans advanced simulation and thermal-fluids analysis, as well as end-to-end mechanical design, CAD modeling, and FEA. At Tsalla Aerospace, I worked extensively on product development, alongside CFD  in a fast-paced defense startup environment. My hands-on design and structural analysis experience is also shaped by my leadership in Formula SAE and various other interdisciplinary projects. I'm currently working as a Research Assistant on Optimization and Simulations at a Lab in the University of Washington.</p>
       </div>
     </section>
 
@@ -169,21 +258,21 @@
           <img src="assets/images/ta_logo.jpeg" alt="Quadcopter" />
           <div class="entry-text">
             <a class="entry-title" href="tsalla_intern.html">TSALLA AEROSPACE – CFD and Design Intern</a>
-            <em>Sep 2021 – Jan 2022</em><br>Increased L/D ratio of UAV and designed lighter components for a quadcopter UAV.
+            <div class="entry-desc"><em>Sep 2021 – Jan 2022</em><br>Increased L/D ratio of UAV and designed lighter components for a quadcopter UAV.</div>
           </div>
         </div>
         <div class="entry">
           <img src="assets/images/RAlab1.png" alt="Acoustic System" />
           <div class="entry-text">
             <a class="entry-title" href="camp_phyre.html">CAMP-PhyRE Lab – Research Assistant</a>
-            <em>Jan 2024 – Present</em><br>Optimized acoustic simulations using Quasi-Newton and Stochastic algorithms for fish deterrence.
+            <div class="entry-desc"><em>Jan 2024 – Present</em><br>Optimized acoustic simulations using Quasi-Newton and Stochastic algorithms for fish deterrence.</div>
           </div>
         </div>
         <div class="entry">
           <img src="assets/images/IISc1.png" alt="IISc Lab" />
           <div class="entry-text">
             <a class="entry-title" href="iisc.html">INDIAN INSTITUTE OF SCIENCE – Research Intern</a>
-            <em>Jun 2019 – Jul 2019</em><br>Tested process parameters on a ceramic plate catalyst to reduce erosion rate.
+            <div class="entry-desc"><em>Jun 2019 – Jul 2019</em><br>Tested process parameters on a ceramic plate catalyst to reduce erosion rate.</div>
           </div>
         </div>
       </div>
@@ -196,7 +285,7 @@
           <img src="assets/images/formulacar-cropped.jpg" alt="Formula Student Car" />
           <div class="entry-text">
             <a class="entry-title" href="fsae.html">DSCE-Motorsports (Formula SAE) – Team Captain & Suspension Lead</a>
-            <em>Aug 2017 – Jul 2019</em><br>Led suspension design and vehicle dynamics modeling for Formula Student team.
+            <div class="entry-desc"><em>Aug 2017 – Jul 2019</em><br>Led suspension design and vehicle dynamics modeling for Formula Student team.</div>
           </div>
         </div>
         <div class="entry">
@@ -215,21 +304,21 @@
           <img src="assets/images/FP7.png" alt="Multi-element Wing" />
           <div class="entry-text">
             <a class="entry-title" href="highlift_ga.html">Optimization of High Lift device of a Multi-Element Wing using Genetic Algorithm</a>
-            <em>Jan 2022 – Jun 2022</em><br>Optimized the flap position of a multi-element wing for high lift configuration using NSGA-II (a Genetic Algorithm) and used Ansys Fluent for simulations.
+            <div class="entry-desc"><em>Jan 2022 – Jun 2022</em><br>Optimized the flap position of a multi-element wing for high lift configuration using NSGA-II (a Genetic Algorithm) and used Ansys Fluent for simulations.</div>
           </div>
         </div>
         <div class="entry">
           <img src="assets/images/NSE_CPP.png" alt="Code Screenshot" />
           <div class="entry-text">
             <a class="entry-title" href="navier_stokes_cpp.html">Navier-Stokes Solver in C++</a>
-            <em>Aug 2023 – Sep 2023</em><br>Implemented the 12 steps to Navier-Stokes in C++ for cavity/channel flow problems. This provided me with an hands on introduction to C++ for Scientific Computing.
+            <div class="entry-desc"><em>Aug 2023 – Sep 2023</em><br>Implemented the 12 steps to Navier-Stokes in C++ for cavity/channel flow problems. This provided me with an hands on introduction to C++ for Scientific Computing.</div>
           </div>
         </div>
         <div class="entry">
           <img src="assets/images/MP1.png" alt="Wind Turbine Blade" />
           <div class="entry-text">
             <a class="entry-title" href="bemt.html">Wind Turbine Blade Design with BEMT and CFD Simulation</a>
-            <em>Jul 2022 – Aug 2022</em><br>Developed a MATLAB code based on Blade Element Momentum Theory (BEMT) for the design of a wind turbine blade and performed CFD analysis for validation.
+            <div class="entry-desc"><em>Jul 2022 – Aug 2022</em><br>Developed a MATLAB code based on Blade Element Momentum Theory (BEMT) for the design of a wind turbine blade and performed CFD analysis for validation.</div>
           </div>
         </div>
       </div>
