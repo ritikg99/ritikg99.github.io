@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heat Transfer Projects - Portfolio</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .detail-container {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      max-width: 1100px;
+      margin-inline: auto;
+      padding: 2rem;
+    }
+    .detail-left {
+      flex: 0.4;
+    }
+    .detail-right {
+      flex: 0.6;
+    }
+    .detail-left img {
+      width: 100%;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+    }
+    .caption {
+      font-size: 0.85rem;
+      color: #bbb;
+      text-align: center;
+      margin-top: -0.8rem;
+      margin-bottom: 1rem;
+    }
+    .top-info {
+      max-width: 600px;
+      margin: auto;
+      padding: 2rem 2rem 0;
+    }
+    .top-info h1 {
+      font-size: 1.6rem;
+    }
+    .top-info p {
+      font-size: 0.95rem;
+      margin-top: 0.3rem;
+      color: #ccc;
+    }
+    .tech-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.5rem 0;
+    }
+    .tech-pill {
+      background-color: rgba(214, 167, 109, 0.2);
+      color: #f0c288;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .project-section {
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(214, 167, 109, 0.3);
+    }
+    .project-section:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo"><a href="index.html" style="text-decoration:none;color:white;">Ritik Gupta</a></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  </nav>
+
+  <section class="top-info">
+    <h1>Heat Transfer and Thermal Projects</h1>
+    <p>May 2025 – June 2025</p>
+  </section>
+
+
+  <section class="detail-container">
+    <div class="detail-left">
+      <!-- New auto-playing video -->
+      <video autoplay loop muted playsinline width="100%">
+        <source src="assets/videos/Natural convection_Cropped.mp4" type="video/mp4">
+      </video>
+      <div class="caption">Temperature contour - Natural convection around a cylinder</div>
+
+      <img src="assets/images/HT_mesh.png" alt="Natural Convection Simulation" />
+      <div class="caption">Mesh around the Heat Sink and Prism layers</div>
+      <img src="assets/images/HT_T cont.png" alt="Heat Sink Simulation" />
+      <div class="caption">Temperature distribution in heat sink</div>
+    </div>
+
+
+
+    <div class="detail-right">
+      <div class="project-section">
+        <h2>Project 1: Natural Convection Over a Cylinder</h2>
+        <p>Performed 2D simulation of natural convection over a cylinder in a vertical channel with a constant heat flux of 10 W/m² to the cylinder.</p>
+        
+        <!-- <h3>Key Features:</h3> -->
+        <ul>
+          <li>Implemented prism layers to resolve thermal boundary layer</li>
+          <li>Applied mesh refinement in the wake region to capture buoyancy-driven flow gradients</li>
+          <li>Analyzed velocity and temperature fields for different Grashof numbers</li>
+        </ul>
+
+        <h3>Simulation details:</h3>
+        <ul>
+          <li>Used Boussinesq approximation for buoyancy modeling</li>
+          <li>Used second-order discretization schemes for accuracy</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Project 2: Heat Sink Thermal Analysis</h2>
+        <p>This numerical study investigates the thermal performance of a heat sink with hybrid fin-pin geometry, replicating the experimental setup of Haghighi et al. Using STAR-CCM+, I first simulated natural convection conditions matching the reference study, observing insufficient heat transfer rates. I then extended the analysis to forced convection scenario (Re ~ 5000) not covered in the original work. Results demonstrated improvement in Nusselt number under forced convection (5m/s airflow) compared to natural convection, validating the design's potential for active cooling applications. </p>
+        
+        <h3>Key Findings:</h3>
+        <ul>
+          <li>Natural convection showed limited heat transfer capability</li>
+          <li>Forced convection (with velocity inlet) significantly improved cooling performance</li>
+          <li>Observed turbulence enhancement behind fins leading to increased heat transfer</li>
+          <li>Verified results against published experimental data</li>
+        </ul>
+
+        <h3>Technical Implementation:</h3>
+        <ul>
+          <li>Special mesh refinement at fin surfaces to resolve thermal boundary layers</li>
+          <li>Applied k-ε turbulence model for forced convection case</li>
+          <li>Quantified improvement in Nusselt number between both cases</li>
+        </ul>
+      </div>
+
+      <div class="tech-pills">
+        <span class="tech-pill">CFD</span>
+        <span class="tech-pill">Natural Convection</span>
+        <span class="tech-pill">Forced Convection</span>
+        <span class="tech-pill">Heat Transfer</span>
+        <span class="tech-pill">Boundary Layer</span>
+        <span class="tech-pill">Mesh Refinement</span>
+        <span class="tech-pill">ANSYS Fluent</span>
+        <span class="tech-pill">Thermal Analysis</span>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
