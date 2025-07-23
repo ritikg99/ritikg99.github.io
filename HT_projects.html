@@ -123,13 +123,13 @@
         <h3>Simulation details:</h3>
         <ul>
           <li>Used Boussinesq approximation for buoyancy modeling</li>
-          <li>Used second-order discretization schemes for accuracy</li>
+          <li>Second-order discretization schemes for accuracy</li>
         </ul>
       </div>
 
       <div class="project-section">
         <h2>Project 2: Heat Sink Thermal Analysis</h2>
-        <p>This numerical study investigates the thermal performance of a heat sink with hybrid fin-pin geometry, replicating the experimental setup of Haghighi et al. Using STAR-CCM+, I first simulated natural convection conditions matching the reference study, observing insufficient heat transfer rates. I then extended the analysis to forced convection scenario (Re ~ 5000) not covered in the original work. Results demonstrated improvement in Nusselt number under forced convection (5m/s airflow) compared to natural convection, validating the design's potential for active cooling applications. </p>
+        <p>This numerical study studies the thermal performance of a heat sink with hybrid plate-fin pin-fin geometry, replicating the experimental setup described in a published paper using STAR-CCM+, I first simulated natural convection conditions matching the reference study, observing insufficient heat transfer rates. I then extended the analysis to forced convection scenario (Re ~ 5000) not covered in the original work. Results demonstrated improvement in Nusselt number under forced convection (5m/s airflow) compared to natural convection, validating the design's potential for active cooling applications. </p>
         
         <h3>Key Findings:</h3>
         <ul>
@@ -138,6 +138,15 @@
           <li>Observed turbulence enhancement behind fins leading to increased heat transfer</li>
           <li>Verified results against published experimental data</li>
         </ul>
+
+        <h3>Quantitative Results:</h3>
+            <p><strong>Natural convection:</strong><br>
+            Heat transfer coefficient: 4.12 W/m²K<br>
+            Thermal resistance R<sub>th</sub>: 0.844 K/W</p>
+            
+            <p><strong>Forced convection:</strong><br>
+            Heat transfer coefficient: 30.7 W/m²K<br>
+            Thermal resistance R<sub>th</sub>: 0.113 K/W</p>
 
         <h3>Technical Implementation:</h3>
         <ul>
@@ -148,6 +157,7 @@
       </div>
 
       <div class="tech-pills">
+        <span class="tech-pill">Thermal Analysis</span>
         <span class="tech-pill">CFD</span>
         <span class="tech-pill">Natural Convection</span>
         <span class="tech-pill">Forced Convection</span>
@@ -155,7 +165,6 @@
         <span class="tech-pill">Boundary Layer</span>
         <span class="tech-pill">Mesh Refinement</span>
         <span class="tech-pill">ANSYS Fluent</span>
-        <span class="tech-pill">Thermal Analysis</span>
       </div>
     </div>
   </section>
