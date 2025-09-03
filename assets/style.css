@@ -73,6 +73,34 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
+
+.media-composite {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.media-image {
+  width: 50%;
+}
+
+.media-video {
+  width: 50%;
+  overflow: hidden; /* Essential for cropping */
+}
+
+.media-image img {
+  width: 100%;
+  border-right: 1px solid #D6A76D;
+  padding-right: 10px;
+}
+
+.media-video video {
+  width: 200%; /* Double width to allow for cropping */
+  margin-left: -50%; /* Crop left half by shifting */
+  display: block;
+}
+
 /* ===== MAIN CONTENT ===== */
 .main-wide {
   padding: 2rem;
@@ -372,3 +400,4 @@ img {
     padding-inline: 0.5rem;
   }
 }
+
