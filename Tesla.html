@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TESLA – Experience</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .detail-container {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      max-width: 1200px;
+      margin-inline: auto;
+      padding: 2rem;
+    }
+    .detail-left {
+      flex: 0.3;
+    }
+    .detail-right {
+      flex: 0.7;
+    }
+    .detail-left img {
+      width: 100%;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+    }
+    .caption {
+      font-size: 0.85rem;
+      color: #bbb;
+      text-align: center;
+      margin-top: -0.8rem;
+      margin-bottom: 1rem;
+    }
+    .top-info {
+      max-width: 600px;
+      margin: auto;
+      padding: 2rem 2rem 0;
+    }
+    .top-info h1 {
+      font-size: 1.6rem;
+    }
+    .top-info p {
+      font-size: 0.95rem;
+      margin-top: 0.3rem;
+      color: #ccc;
+    }
+
+    .section-button {
+      background-color: rgba(214, 167, 109, 0.2); /* Light copper translucent */
+      border: 1px solid #D6A76D;
+      color: #D6A76D;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 20px;
+      margin: 0.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .section-button:hover {
+      background-color: rgba(240, 194, 136, 0.3);
+      color: #f0c288;
+      transform: translateY(-1px);
+    }
+
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZML3CY0F9N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZML3CY0F9N');
+  </script>
+
+</head>
+<body>
+  <nav>
+    <div class="logo"><a href="index.html" style="text-decoration:none;color:white;">Ritik Gupta</a></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  </nav>
+
+  <section class="top-info">
+    <h1>TESLA</h1>
+    <p>San-Fransisco Bay Area</p>
+    <p>January 2026 – Present</p>
+  </section>
+
+  <div style="text-align: center; margin-top: 1rem;">
+    <button onclick="document.getElementById('design').scrollIntoView({ behavior: 'smooth' })" class="section-button">Design</button>
+    <button onclick="document.getElementById('cfd').scrollIntoView({ behavior: 'smooth' })" class="section-button">CFD</button>
+  </div>
+
+  <section class="detail-container">
+    <div class="detail-left">
+      <img src="assets/images/Tesla_1.jpg" alt="TESLA Image 1" />
+      
+    </div>
+
+    <div class="detail-right">
+      <p>        
+      I'm on the vehicle Engineering division of Tesla and I'm working on designing and developing structural components, system requirements and specifications from concepts to mass production. 
+      </p>
+      
+      
+        
+      </p>
+    </div>
+  </section>
+</body>
+</html>
